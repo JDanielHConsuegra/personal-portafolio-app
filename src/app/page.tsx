@@ -17,17 +17,17 @@ export default function Home() {
     </section>
     <section id="About" className="p-10 flex flex-col items-center"> 
     <Image src={"https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612384/noBusques_iasvuq.png"} className="mt-10 min-w-[180px] min-h-[60px] hover:scale-105 grayscale-100 hover:grayscale-0 transition-all duration-200 cursor-pointer" alt="Introducción" width={500} height={300} />
-    <h2 className="font-bold text-center mt-3 font-sans text-3xl text-black">My name is Juan Daniel</h2>
+    
     <div className="flex flex-col items-center gap-5">
-    <p className="font-bold text-black text-center">💻 Fullstack Developer with intensive training at Henry Bootcamp, where I gained strong proficiency in technologies such as JavaScript, React, Node.js, and databases. Passionate about building efficient, maintainable, and user-centered web solutions.
+    <p className="font-bold w-fit mt-9 m-auto p-3 shadow-2xl rounded-2xl font-stretch-90% bg-white/40 text-black text-center">💻 Fullstack Developer with intensive training at Henry Bootcamp, where I gained strong proficiency in technologies such as JavaScript, React, Node.js, and databases. Passionate about building efficient, maintainable, and user-centered web solutions.
 </p>
-    <p className="font-bold text-black text-center">👨‍✈️ I bring a unique professional foundation: I was a Naval Officer in the Colombian Navy, with experience as a Company Commander at the Marine Infantry Training Battalion. This stage helped me develop essential skills like leadership, decision-making under pressure, and effective team management.
+    <p className="font-bold w-fit mt-9 m-auto p-3 shadow-2xl rounded-2xl font-stretch-90% bg-white/40 text-black text-center">👨‍✈️ I bring a unique professional foundation: I was a Naval Officer in the Colombian Navy, with experience as a Company Commander at the Marine Infantry Training Battalion. This stage helped me develop essential skills like leadership, decision-making under pressure, and effective team management.
 </p>
-    <p className="font-bold text-black text-center">🎯 Im seeking software development opportunities where I can apply my disciplined approach, strategic vision, and commitment to excellence. My additional training in cybersecurity and programming at Platzi gives me a well-rounded perspective to add value both in development and system protection.
+    <p className="font-bold w-fit mt-9 m-auto p-3 shadow-2xl rounded-2xl font-stretch-90% bg-white/40 text-black text-center">🎯 Im seeking software development opportunities where I can apply my disciplined approach, strategic vision, and commitment to excellence. My additional training in cybersecurity and programming at Platzi gives me a well-rounded perspective to add value both in development and system protection.
 </p>
-    <p className="font-bold text-black text-center">🚀 Im constantly learning and ready to contribute high-impact technological solutions.
+    <p className="font-bold w-fit mt-9 m-auto p-3 shadow-2xl rounded-2xl font-stretch-90% bg-white/40 text-black text-center">🚀 Im constantly learning and ready to contribute high-impact technological solutions.
 </p>
-    <p className="font-bold text-black text-center">🗣️ I have advanced English proficiency, both written and conversational, which enables me to communicate clearly and effectively in professional and international collaborative environments.
+    <p className="font-bold w-fit mt-9 m-auto p-3 shadow-2xl rounded-2xl font-stretch-90% bg-white/40 text-black text-center">🗣️ I have advanced English proficiency, both written and conversational, which enables me to communicate clearly and effectively in professional and international collaborative environments.
  <span>If you want to get in touch, <Link target="_blank" rel="noopener noreferrer" className="underline hover:underline-offset-0 text-blue-950" href={"mailto:jh.consuegra75@gmail.com"}>here is my email</Link></span>
 </p>
     </div>

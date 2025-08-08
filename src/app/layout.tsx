@@ -38,7 +38,7 @@ export default function RootLayout({
       >
       <main className="max-h-screen flex items-center justify-center p-10 bg-fixed">
         <div
-          className="w-full max-w-4xl h-[90vh] sm:h-[600px] overflow-y-scroll scrollbar-none bg-white/90 backdrop-blur-md rounded-xl shadow-xl border border-gray-200"
+          className="w-full max-w-4xl h-[90vh] sm:h-[600px] overflow-y-scroll scrollbar-none bg-white/60 rounded-xl shadow-xl border border-gray-200"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           <style>
