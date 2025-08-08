@@ -17,7 +17,7 @@ export default function Home() {
     </section>
     <section id="About" className="p-10 flex flex-col items-center"> 
     <Image src={"https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612384/noBusques_iasvuq.png"} className="mt-10 min-w-[180px] min-h-[60px] hover:scale-105 grayscale-100 hover:grayscale-0 transition-all duration-200 cursor-pointer" alt="Introducción" width={500} height={300} />
-    <h2 className="font-bold mt-3 font-sans text-3xl text-black">My name is Juan Daniel</h2>
+    <h2 className="font-bold text-center mt-3 font-sans text-3xl text-black">My name is Juan Daniel</h2>
     <div className="flex flex-col items-center gap-5">
     <p className="font-bold text-black text-center">💻 Fullstack Developer with intensive training at Henry Bootcamp, where I gained strong proficiency in technologies such as JavaScript, React, Node.js, and databases. Passionate about building efficient, maintainable, and user-centered web solutions.
 </p>
