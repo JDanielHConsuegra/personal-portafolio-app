@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
+import { Playfair_Display, Fira_Code } from "next/font/google";
+import { NavBar } from "@/components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
   subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const firaCode = Fira_Code({
+  variable: "--font-fira-code",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -25,9 +34,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={` ${geistSans.variable} ${playfairDisplay.variable} ${firaCode.variable} antialiased`}
       >
+      <main className="max-h-screen flex items-center justify-center p-10 bg-fixed">
+        <div className="w-full max-w-4xl h-[90vh] overflow-y-scroll scrollbar-none bg-white/90 backdrop-blur-md rounded-xl shadow-xl border border-gray-200"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+        <style>
+          {`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+          `}
+        </style>
+        <NavBar />
         {children}
+        </div>
+      </main>
       </body>
     </html>
   );

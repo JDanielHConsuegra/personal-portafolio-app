@@ -1,103 +1,60 @@
+"use client";
+import { Imgtext } from "@/components/ImgText";
+import { ProyectCard } from "@/components/ProyectCard";
 import Image from "next/image";
+import Link from "next/link";
+import { FaReact, FaJs, FaNodeJs } from 'react-icons/fa';
+import { SiTypescript } from 'react-icons/si';
+import { BiLogoTailwindCss } from 'react-icons/bi';
+import { RiNextjsFill } from 'react-icons/ri';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex flex-col gap-20 items-center p-4 h-screen">
+    <section className="mt-2 flex flex-col items-center p-5 mb-20" id="Home">
+    <Image className="border-2 rounded border-black" src={"https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612383/developer_hm8c7d.gif"} alt="Logo" width={400} height={400} />
+    <Image src={"https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612383/intro_ktzygi.png"} alt="Logo" width={500} height={300} className="mt-10 min-w-[180px] min-h-[100px] hover:scale-105 transition-all duration-200 grayscale-100 hover:grayscale-0 cursor-pointer" />
+    </section>
+    <section id="About" className="p-10 flex flex-col items-center"> 
+    <Image src={"https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612384/noBusques_iasvuq.png"} className="mt-10 min-w-[180px] min-h-[60px] hover:scale-105 grayscale-100 hover:grayscale-0 transition-all duration-200 cursor-pointer" alt="Introducción" width={500} height={300} />
+    <p className="font-bold text-center">I am Juan, a frontend developer focused on creating scalable, responsive, and visually appealing interfaces. I work with Next.js, React, and TailwindCSS, optimizing every project for efficient deployment and a flawless user experience. <span>If you want to get in touch, <Link className=" hover:underline text-blue-950" href={"mailto:jh.consuegra75@gmail.com"}>here is my email</Link></span>
+    </p>
+    <Image src={"https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612383/imagen_perfil_cv_cfpia3.jpg"} className="mt-10 rounded-full border-2 border-black hover:scale-105 transition-transform duration-200 cursor-pointer shadow-2xl" alt="Introducción" width={300} height={500}  />
+    <div className="flex flex-wrap items-baseline-last justify-center gap-5 mt-10 mb-10">
+    <FaJs className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-yellow-500" />
+    <SiTypescript className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-blue-600" />
+    <FaReact className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-blue-400" />
+    <RiNextjsFill className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-black" />
+    <FaNodeJs className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-green-600" />
+    <BiLogoTailwindCss className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-sky-400" />
+    </div>
+    <Image src={"https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612384/studies_vjuke2.png"} id="Studies" className="mt-10 min-w-[230px] min-h-[110px] hover:scale-105 grayscale-100 hover:grayscale-0 transition-all duration-200 cursor-pointer" alt="CV" width={500} height={300} />
+    <div className="flex flex-wrap items-baseline-last justify-center gap-5 mt-10">
+      <Imgtext imageUrl="https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612383/ENAP_snvoz3.png" text="ENAP" link="https://www.enap.edu.co/" />
+      <Imgtext imageUrl="https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612383/PLATZI_pmoqol.jpg" text="Platzi" link="https://platzi.com/" />
+      <Imgtext imageUrl="https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612383/HENRY_cpgg0x.jpg" text="Henry" link="https://www.soyhenry.com/" />
+      <Imgtext imageUrl="https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612384/Youtube_f8ushi.webp" text="YouTube" link="https://www.youtube.com/" />
+    </div>
+    </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+    <section id="Projects" className="p-6 flex gap-10 flex-col items-center">
+   <Image src={"https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612384/Projects_zdr6k2.png"} className="mt-10 hover:scale-105 grayscale-100 hover:grayscale-0 transition-all duration-200 cursor-pointer" alt="Proyectos" width={500} height={300} /> 
+    <ProyectCard
+      title="Electric-Bikes E-commerce"
+      description="A robust and scalable e-commerce solution specifically designed for electric vehicle companies. Built using modern technologies like Next.js, React, and TypeScript, this platform ensures a smooth, secure, and highly customizable user experience."
+      imageUrl="https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612383/Ecommerce_cidkbm.png"
+      link="https://electric-bikes-e-commerce.vercel.app/"
+    />
+    <ProyectCard
+      title="🧭 Import Management System"
+      description="🌐 Web Application Overview
+This web application is built with Next.js on the frontend and NestJS on the backend, specifically designed to optimize the management of business logistics and import processes.
+"
+      imageUrl="https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612384/TradeTrack_nrlgi0.png"
+      link="https://trade-track-nu.vercel.app/"/>
+    </section>
+
     </div>
   );
 }

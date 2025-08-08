@@ -1,0 +1,8 @@
+{
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.extensionOnImport": true,
+  "path-intellisense.showOnAbsoluteSlash": true,
+  "path-intellisense.mappings": {
+    "/": "${workspaceFolder}/public"
+  }
+}
