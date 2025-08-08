@@ -37,18 +37,19 @@ export default function RootLayout({
       className={` ${geistSans.variable} ${playfairDisplay.variable} ${firaCode.variable} antialiased`}
       >
       <main className="max-h-screen flex items-center justify-center p-10 bg-fixed">
-        <div className="w-full max-w-4xl h-[90vh] overflow-y-scroll scrollbar-none bg-white/90 backdrop-blur-md rounded-xl shadow-xl border border-gray-200"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        <div
+          className="w-full max-w-4xl h-[90vh] sm:h-[600px] overflow-y-scroll scrollbar-none bg-white/90 backdrop-blur-md rounded-xl shadow-xl border border-gray-200"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-        <style>
-          {`
-          div::-webkit-scrollbar {
-            display: none;
-          }
-          `}
-        </style>
-        <NavBar />
-        {children}
+          <style>
+            {`
+              div::-webkit-scrollbar {
+                display: none;
+              }
+            `}
+          </style>
+          <NavBar />
+          {children}
         </div>
       </main>
       </body>
