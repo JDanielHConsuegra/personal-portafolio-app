@@ -21,12 +21,12 @@ export default function Home() {
     </p>
     <Image src={"https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612383/imagen_perfil_cv_cfpia3.jpg"} className="mt-10 rounded-full border-2 border-black hover:scale-105 transition-transform duration-200 cursor-pointer shadow-2xl" alt="Introducción" width={300} height={500}  />
     <div className="flex flex-wrap items-baseline-last justify-center gap-5 mt-10 mb-10">
-    <FaJs className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-yellow-500" />
-    <SiTypescript className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-blue-600" />
-    <FaReact className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-blue-400" />
-    <RiNextjsFill className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-black" />
-    <FaNodeJs className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-green-600" />
-    <BiLogoTailwindCss className="text-8xl cursor-pointer grayscale-100 hover:grayscale-0 transition-all duration-200 text-sky-400" />
+    <FaJs className="text-8xl cursor-pointer transition-all duration-200 text-yellow-500" />
+    <SiTypescript className="text-8xl cursor-pointer transition-all duration-200 text-blue-600" />
+    <FaReact className="text-8xl cursor-pointer transition-all duration-200 text-blue-400" />
+    <RiNextjsFill className="text-8xl cursor-pointer transition-all duration-200 text-black" />
+    <FaNodeJs className="text-8xl cursor-pointer transition-all duration-200 text-green-600" />
+    <BiLogoTailwindCss className="text-8xl cursor-pointer transition-all duration-200 text-sky-400" />
     </div>
     <Image src={"https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612384/studies_vjuke2.png"} id="Studies" className="mt-10 min-w-[230px] min-h-[110px] hover:scale-105 grayscale-100 hover:grayscale-0 transition-all duration-200 cursor-pointer" alt="CV" width={500} height={300} />
     <div className="flex flex-wrap items-baseline-last justify-center gap-5 mt-10">
