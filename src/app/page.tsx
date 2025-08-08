@@ -28,7 +28,7 @@ export default function Home() {
     <p className="font-bold text-black text-center">🚀 Im constantly learning and ready to contribute high-impact technological solutions.
 </p>
     <p className="font-bold text-black text-center">🗣️ I have advanced English proficiency, both written and conversational, which enables me to communicate clearly and effectively in professional and international collaborative environments.
- <span>If you want to get in touch, <Link className=" hover:underline text-blue-950" href={"mailto:jh.consuegra75@gmail.com"}>here is my email</Link></span>
+ <span>If you want to get in touch, <Link target="_blank" rel="noopener noreferrer" className="underline hover:underline-offset-0 text-blue-950" href={"mailto:jh.consuegra75@gmail.com"}>here is my email</Link></span>
 </p>
     </div>
     <Image src={"https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612383/imagen_perfil_cv_cfpia3.jpg"} className="mt-10 rounded-full border-2 border-black hover:scale-105 transition-transform duration-200 cursor-pointer shadow-2xl" alt="Introducción" width={300} height={500}  />

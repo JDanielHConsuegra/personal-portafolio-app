@@ -3,6 +3,7 @@ import Link from 'next/dist/client/link';
 import { FaInstagram, FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa';
 import { LuSquareMenu } from 'react-icons/lu';
 import { useState } from 'react';
+import { LuMailPlus } from 'react-icons/lu';
 
 export const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,9 @@ export const NavBar = () => {
     </Link>
         <Link href={"https://github.com/JDanielHConsuegra"} target="_blank" rel="noopener noreferrer">
         <FaGithub/>
+        </Link>
+        <Link href={"mailto:jh.consuegra75@gmail.com"} target="_blank" rel="noopener noreferrer">
+        <LuMailPlus/>
         </Link>
         </div>
         <button className=' cursor-pointer hover:scale-110 transition-transform duration-300' onClick={() => setIsOpen(!isOpen)}>

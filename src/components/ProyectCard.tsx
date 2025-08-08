@@ -11,7 +11,7 @@ interface ProyectCardProps {
 export const ProyectCard = ({ title, description, imageUrl, link }: ProyectCardProps) => {
     return (
         <div className="rounded-lg flex flex-col items-center overflow-hidden shadow-lg">
-            <Link href={link}>
+            <Link target="_blank" rel="noopener noreferrer" href={link}>
             <Image src={imageUrl} alt={title} width={500} height={300} className='rounded' />
             </Link>
             <div className="p-4 text-center">
