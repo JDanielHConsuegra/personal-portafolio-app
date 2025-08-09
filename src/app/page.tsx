@@ -75,7 +75,7 @@ This web application is built with Next.js on the frontend and NestJS on the bac
     <div className="h-1 mt-1">.</div>
     {
       isOpen && (
-        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
           <ContactForm />
           <button onClick={() => setIsOpen(false)} className="absolute hover:scale-115 transition-all duration-200 cursor-pointer top-15 right-15 text-white text-3xl"><FaWindowClose className="text-white" /></button>
         </div>

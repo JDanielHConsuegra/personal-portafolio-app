@@ -1,20 +1,21 @@
+import { IMessage } from "@/components/Form";
 import axios, { AxiosError } from "axios";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-export const postMessage = async (formData: FormData) => {
+export const postMessage = async (values: IMessage) => {
   try {
-    const response = await axios.post(`${API_URL}/messages`, formData);
-    if (response.status !== 200) {
+    const response = await axios.post(`${API_URL}messages`, values);
+    if (response.status === 201) {
         return {
             error: response.data,
-            message: "Failed to send message"
+            message: "Message sent successfully"
         }
     }
     else{
         return {
             data: response.data,
-            message: "Message sent successfully"
+            message: "Failed to send message"
         }
     }
   } catch (error) {

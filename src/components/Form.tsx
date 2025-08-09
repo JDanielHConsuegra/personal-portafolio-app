@@ -1,8 +1,43 @@
+"use client"
 import {Formik, Field, ErrorMessage, Form} from 'formik';
 import * as Yup from 'yup';
 import {toast} from 'react-toastify';
+import {postMessage} from "@/services/postMessage";
+import { useRouter } from 'next/navigation';
+
+export interface IMessage {
+    name: string;
+    email: string;
+    message: string;
+}
 
 export const ContactForm = () => {
+    const router = useRouter();
+    const ToogleMessage = async (values: IMessage) => {
+        try {
+            console.log("Sending message:", values);
+
+            const res = await postMessage(values);
+            if (res.message === "Failed to send message"){
+                toast.error(`${res.message} Sorry, ${values.name}, please try again later.`);
+                return;
+            }
+            if (res.message === "Message sent successfully"){
+                toast.success("Mensaje enviado correctamente!");
+                router.push("/");
+                return;
+            }
+            if (res.message === "An unexpected error occurred") {
+                toast.error(`${res.message} Please try again later. ${values.name}`);
+                console.log("Unexpected error:", res.error);
+                return;
+            }
+        } catch (error) {
+            toast.error("Error al enviar el formulario");
+            console.log("Error al enviar el formulario:", error);
+            
+        }
+    }
     const initial = {
         name: '',
         email: '',
@@ -17,8 +52,8 @@ return (
     <div>
     <Formik
     initialValues={initial}
-    onSubmit={()=>{
-        toast.success("Formulario enviado");
+    onSubmit={(values) => {
+        ToogleMessage(values);
     }}
     validationSchema={validationSchema}
     >
