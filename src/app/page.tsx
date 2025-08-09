@@ -7,8 +7,13 @@ import { FaReact, FaJs, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 import { BiLogoTailwindCss } from 'react-icons/bi';
 import { RiNextjsFill } from 'react-icons/ri';
+import { useState } from "react";
+import { ContactForm } from "@/components/Form";
+import { FaMailBulk } from 'react-icons/fa';
+import { FaWindowClose } from 'react-icons/fa';
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex flex-col gap-20 items-center p-4 h-screen">
     <section className="mt-2 flex flex-col items-center p-5 mb-20" id="Home">
@@ -66,7 +71,16 @@ This web application is built with Next.js on the frontend and NestJS on the bac
       imageUrl="https://res.cloudinary.com/dvyrs30i1/image/upload/v1754612384/TradeTrack_nrlgi0.png"
       link="https://trade-track-nu.vercel.app/"/>
     </section>
-
+    <button id="contact" onClick={() => setIsOpen(true)} className="w-fit shadow-2xl shadow-black mb-10 cursor-pointer hover:scale-105 transition-all duration-200 bg-gray-900 p-3 rounded-2xl flex gap-2 items-center text-2xl font-bold text-white"> <FaMailBulk className="text-3xl text-gray-50" /> Leave a Message</button>
+    <div className="h-1 mt-1">.</div>
+    {
+      isOpen && (
+        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
+          <ContactForm />
+          <button onClick={() => setIsOpen(false)} className="absolute hover:scale-115 transition-all duration-200 cursor-pointer top-15 right-15 text-white text-3xl"><FaWindowClose className="text-white" /></button>
+        </div>
+      )
+    }
     </div>
   );
 }

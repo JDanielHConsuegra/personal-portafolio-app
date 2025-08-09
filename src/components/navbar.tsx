@@ -41,6 +41,7 @@ export const NavBar = () => {
                     <Link href="#About" className='text-lg hover:text-amber-800 transition-colors duration-300'>About me</Link>
                     <Link href="#Studies" className='text-lg hover:text-amber-800 transition-colors duration-300'>Studies </Link>
                     <Link href="#Projects" className='text-lg hover:text-amber-800 transition-colors duration-300'>Projects</Link>
+                    <Link href="#contact" className='text-lg hover:text-amber-800 transition-colors duration-300'>Contact</Link>
                 </div>
             )
         }
